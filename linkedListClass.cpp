@@ -73,14 +73,22 @@ public:
         }
         cout<<endl;
     }
-    void reverse(){
-        node *temp = head;
-        node *temp2 = NULL;
-        while(temp != NULL){
-            temp2 = temp->next;
-            temp->next = head;
-            head = temp;
-            temp = temp2;
-        }
-    }
 };
+
+int main()
+{
+    linked_list l;
+    l.insert_at_beginning(1);
+    l.insert_at_beginning(2);
+    l.insert_at_beginning(3);
+    l.insert_at_beginning(4);
+    l.insert_at_beginning(5);
+    l.display();
+    l.delete_at_beginning();
+    l.display();
+    l.delete_at_end();
+    l.display();
+    l.delete_at_position(2);
+    l.display();
+    return 0;
+}
