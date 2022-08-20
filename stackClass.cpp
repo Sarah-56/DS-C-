@@ -28,6 +28,7 @@ public:
     void pop(){
         node *temp = head;
         head = head->next;
+        cout << "Deleted element is " << temp->data << endl;
         delete temp;
     }
     void display(){
@@ -46,3 +47,16 @@ public:
         }
     }
 };
+
+int main()
+{
+    stack s;
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    s.display();
+    s.pop();
+    s.display();
+    s.is_empty();
+    return 0;
+}
